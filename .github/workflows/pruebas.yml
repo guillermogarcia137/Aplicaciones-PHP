@@ -1,0 +1,16 @@
+name: Probar PHP
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+      - run: php -l public/index.php && php -l src/Store.php && php -l src/domain.php
+      - run: php tests/test.php
+      - run: php tests/http.php

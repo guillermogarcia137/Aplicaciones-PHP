@@ -1,0 +1,9 @@
+* text=auto
+*.rs text eol=lf
+*.java text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.php text eol=lf
+*.md text eol=lf
+*.shortcut text eol=lf
+*.png binary
